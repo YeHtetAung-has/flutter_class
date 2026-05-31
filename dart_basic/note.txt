@@ -1,0 +1,5 @@
+how to run
+
+# dart run your dart file that include void main()
+
+# careful => you need to go folder that include void main()
