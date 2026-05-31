@@ -5,3 +5,23 @@ void whileLoop() {
     loop++;
   }
 }
+
+void checkLoggInAttempt(String password) {
+  var isLoggedIn = false;
+  var attempt = 0;
+
+  while (!isLoggedIn) {
+    if (password == "12345") {
+      print("Logged In Successfully!");
+      isLoggedIn = true;
+    } else {
+      print("Wrong Password");
+      attempt++;
+    }
+
+    if (attempt == 3) {
+      print("Too many attempts. Try again later.");
+      break;
+    }
+  }
+}

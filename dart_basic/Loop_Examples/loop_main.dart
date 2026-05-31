@@ -12,7 +12,13 @@ void main() {
   forLoop();
 
   /*
-  * For Loop
+  * Reverse For Loop
+  */
+  print("Reverse For Loop");
+  reverseForLoop();
+
+  /*
+  * while Loop
   */
   print("While Loop");
   whileLoop();

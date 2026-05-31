@@ -4,3 +4,10 @@ void forLoop() {
     print("I Love You");
   }
 }
+
+void reverseForLoop() {
+  var Loop = 10;
+  for (int i = Loop; i > 0; i--) {
+    print(i);
+  }
+}
