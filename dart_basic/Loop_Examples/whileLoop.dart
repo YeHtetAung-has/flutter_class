@@ -25,3 +25,11 @@ void checkLoggInAttempt(String password) {
     }
   }
 }
+
+void printEvenNumbers() {
+  var number = 1;
+  while (number <= 5) {
+    print(number * 2);
+    number++;
+  }
+}
