@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_example/counter_notifier.dart';
-import 'package:riverpod_example/name_notifier.dart';
+import 'package:riverpod_example/providers/counter_notifier.dart';
+import 'package:riverpod_example/providers/name_notifier.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -69,7 +69,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               ),
             ),
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 16.0,
+                vertical: 8.0,
+              ),
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: _updateName,
