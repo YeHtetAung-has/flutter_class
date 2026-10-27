@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_example/core/logs/app_logger.dart';
 import 'package:riverpod_example/providers/counter_notifier.dart';
 import 'package:riverpod_example/providers/name_notifier.dart';
 
@@ -28,11 +29,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   void _updateName() {
     if (nameController.text.isEmpty) return;
     ref.read(nameProvider.notifier).updateName(nameController.text);
+    AppLogger.info('Name updated to: ${ref.read(nameProvider)}');
     nameController.clear();
   }
 
   void _resetName() {
     ref.read(nameProvider.notifier).resetName();
+    AppLogger.info('Name reset to: ${ref.read(nameProvider)}');
     nameController.clear();
   }
 
